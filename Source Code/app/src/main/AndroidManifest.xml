@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/distance_background"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MediConnectnew"
+        tools:targetApi="31">
+
+        <!-- Splash Activity (Main Launcher) -->
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/Theme.MediConnectnew.Splash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- Other Activities -->
+        <activity
+            android:name=".WelcomeActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".AIChatActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".SymptomCheckerActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ConsultDoctorActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".HospitalActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ReminderActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".HealthRecordsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".MessageHistoryActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".NotificationsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ConversationActivity"
+            android:exported="false"
+            android:parentActivityName=".ConsultDoctorActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+
+
+        <!-- Broadcast Receiver for Reminders -->
+        <receiver android:name=".ReminderReceiver" android:exported="false" />
+
+        <!-- File Provider for sharing files -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.mediconnectnew.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

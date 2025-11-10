@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_background"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="8dp"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Symptom Checker"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginStart="16dp"/>
+
+        </LinearLayout>
+
+        <!-- Content -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CardStyle"
+            android:layout_margin="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select your symptoms:"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Basic Symptoms -->
+                <CheckBox
+                    android:id="@+id/cbFever"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fever"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+                <CheckBox
+                    android:id="@+id/cbCough"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cough"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+                <CheckBox
+                    android:id="@+id/cbHeadache"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Headache"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+                <CheckBox
+                    android:id="@+id/cbNausea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nausea"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+                <CheckBox
+                    android:id="@+id/cbFatigue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fatigue"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+                <CheckBox
+                    android:id="@+id/cbSoreThroat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sore Throat"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+                <CheckBox
+                    android:id="@+id/cbBodyAche"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Body Ache"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+                <CheckBox
+                    android:id="@+id/cbDiarrhea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Diarrhea"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Respiratory & Cardiovascular -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Respiratory and Cardiovascular"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp" />
+
+                <CheckBox
+                    android:id="@+id/cbShortnessOfBreath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shortness of Breath"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp" />
+                <CheckBox
+                    android:id="@+id/cbChestPain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chest Pain"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Neurological & General -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Neurological and General"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp" />
+
+                <CheckBox
+                    android:id="@+id/cbDizziness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dizziness"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp" />
+                <CheckBox
+                    android:id="@+id/cbConfusion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Confusion"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Other Symptoms -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other Symptoms"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp" />
+
+                <CheckBox
+                    android:id="@+id/cbLossOfTasteOrSmell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loss of Taste or Smell"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+                <CheckBox
+                    android:id="@+id/cbRunnyNose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Runny Nose"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+                <CheckBox
+                    android:id="@+id/cbVomiting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vomiting"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+                <CheckBox
+                    android:id="@+id/cbPersistentVomiting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Persistent Vomiting"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Miscellaneous -->
+                <CheckBox
+                    android:id="@+id/cbChills"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chills"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+                <CheckBox
+                    android:id="@+id/cbSweating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sweating"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+                <CheckBox
+                    android:id="@+id/cbRapidHeartbeat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rapid Heartbeat"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+                <CheckBox
+                    android:id="@+id/cbSwelling"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Swelling"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+                <CheckBox
+                    android:id="@+id/cbSkinRash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Skin Rash"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+                <CheckBox
+                    android:id="@+id/cbEyeRedness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Eye Redness or Irritation"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+                <CheckBox
+                    android:id="@+id/cbWeightLoss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Weight Loss"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+                <CheckBox
+                    android:id="@+id/cbDifficultySwallowing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Difficulty Swallowing"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+                <CheckBox
+                    android:id="@+id/cbNightSweats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Night Sweats"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+
+                <Button
+                    android:id="@+id/btnCheckSymptoms"
+                    style="@style/ButtonStyle"
+                    android:layout_width="match_parent"
+                    android:text="Check Conditions"
+                    android:backgroundTint="@color/primary_blue"
+                    android:layout_marginTop="16dp"/>
+
+                <TextView
+                    android:id="@+id/tvResults"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:padding="16dp"
+                    android:background="#C8D7EF"
+                    android:textColor="@color/text_primary"
+                    android:textSize="14sp"
+                    android:visibility="gone"/>
+
+                <Button
+                    android:id="@+id/btnConsultDoctor"
+                    style="@style/ButtonStyle"
+                    android:layout_width="match_parent"
+                    android:text="Consult Doctor Now"
+                    android:backgroundTint="@color/primary_blue"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

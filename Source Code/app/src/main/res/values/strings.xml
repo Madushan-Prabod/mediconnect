@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MediConnect</string>
+    <string name="welcome_title">Welcome to MediConnect</string>
+    <string name="welcome_subtitle">Your Health, Our Priority</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="name">Full Name</string>
+    <string name="phone">Phone Number(Whatsapp)</string>
+    <string name="specialization">Specialization</string>
+    <string name="ask_ai_agent">Ask AI Agent</string>
+    <string name="symptom_checker">Symptom Checker</string>
+    <string name="consult_doctor">Consult Doctor</string>
+    <string name="government_hospitals">Government Hospitals</string>
+    <string name="reminders">Reminders</string>
+    <string name="health_records">Health Records</string>
+    <string name="dashboard_title">MediConnect Dashboard</string>
+    <string name="hello_user">Hello, %s!</string>
+    <string name="desemail">email</string>
+    <string name="my_profile">My Profile</string>
+    <string name="back">back</string>
+</resources>
